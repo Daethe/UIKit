@@ -1,0 +1,53 @@
+.navigation {
+	height: 100px;
+	background: $green1;
+	border-radius: 10px;
+
+	padding: 20px 0;
+
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+	box-sizing: border-box;
+
+	.navigation--logo {text-align: center;}
+	.navigation--link {
+		ul li {
+			display: inline-block;
+			text-align: center;
+
+			line-height: 60px;
+
+			font-family: "LatoR";
+			font-size: 18px;
+			font-variant: small-caps;
+
+			a {
+				text-decoration: none;
+				color: $red1;
+			}
+		}
+	}
+	.navigation--search {
+		.navigation--search--input, .navigation--search--submit {
+			background: $green2;
+			color: $green1;
+			border-radius: 10px 0 0 10px;
+			border: none;
+		}
+
+		.navigation--search--input {
+			font-family: 'LatoB';
+			font-size: 20px;
+
+			&::-webkit-input-placeholder {color:#2a3b4c;}
+			&:focus {outline: none;}
+		}
+
+		.navigation--search--submit {
+			border-radius: 0 10px 10px 0;
+			padding: 0;
+
+			&:hover {outline: none;}
+		}
+	}
+
+}

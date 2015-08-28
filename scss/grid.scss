@@ -1,0 +1,23 @@
+@import "inc/vars/vars";
+
+.grid-container {
+	margin: 20px auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+%col {
+	float: left;
+	position: relative;
+	height: 100%;
+	min-height: 1px;
+	padding: 0 $gutter * 1;
+	box-sizing: border-box;
+}
+
+@for $i from 1 through $columns {
+	.col-#{$i} {
+		@extend %col;
+		width: $i / $columns * 100%;
+	}
+}

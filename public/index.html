@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/grid.css">
+		<link rel="stylesheet" href="css/uikit.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+	</head>
+	<body ng-app="uikit">
+		<div class="grid-container">
+			<!-- Barre de navigation -->
+			<div class="navigation">
+				<div class="navigation--logo col-3">
+					<img src="img/logo.png" alt="">
+				</div>
+				<div class="navigation--link col-12">
+					<ul>
+						<li class="col-4"><a href="#">Home</a></li>
+						<li class="col-4"><a href="#">Blog</a></li>
+						<li class="col-4"><a href="#">Portfolio</a></li>
+						<li class="col-4"><a href="#">About</a></li>
+						<li class="col-4"><a href="#">Contact</a></li>
+					</ul>
+				</div>
+				<div class="navigation--search col-5">
+					<input class="navigation--search--input col-16" type="text" placeholder="Search...">
+					<button class="navigation--search--submit col-4">
+						<i class="fa fa-search fa-lg"></i>
+					</button>
+				</div>
+			</div>
+			<!-- Calendrier -->
+			<div class="calendar" ng-controller="calendarCtrl">
+				<div class="calendar--header">
+					<div class="calendar--header--currentday col-9">
+						<span>27</span>
+					</div>
+					<div class="calendar--header--currentdate col-11">
+						<span>August 2015 Thursday</span>
+					</div>
+				</div>
+				<div class="calendar--body">
+					<div class="calendar--body--number" ng-repeat="number in numbers">{{number}}</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/lib/angular.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
